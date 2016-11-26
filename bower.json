@@ -1,0 +1,22 @@
+{
+  "name": "ministore",
+  "homepage": "https://github.com/ValentynaGorbachenko/ministore",
+  "authors": [
+    "ValentynaGorbachenko <gorbachenko.valentyna@gmail.com>"
+  ],
+  "description": "A simple store page example using Angular",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9"
+  }
+}
