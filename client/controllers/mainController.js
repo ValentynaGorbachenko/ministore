@@ -5,6 +5,7 @@ app.controller('MainController', ['$scope', 'FijiFactory', ($scope, FijiFactory)
 	$scope.fijidata = {};
 	$scope.products = [];
 	$scope.loaded = false;
+	$scope.lessthan20 = false;
 	// console.log('fijidata', $scope.fijidata);
 	FijiFactory.getFijiData((data)=>{
 		// $scope.fijidata = JSON.stringify(data);
@@ -22,4 +23,14 @@ app.controller('MainController', ['$scope', 'FijiFactory', ($scope, FijiFactory)
 		}
 		return "$"+Math.floor(num/100)+"."+num%100;
 	};
+	// $scope.less20 = (product, $scope.lessthan20)=>{
+	// 	if (lessthan20){
+	// 		if (product.defaultPriceInCents>2000){
+	// 			return true;
+	// 		} else {
+	// 			return false;
+	// 		}
+	// 	}
+	// 	return true;
+	// };
 }]);
