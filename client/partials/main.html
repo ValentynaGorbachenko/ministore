@@ -1,4 +1,27 @@
 <!-- main.html  ministore project-->
-<div ng-controller='MainController'>
-	<div ng-bind="fijidata"></div>
+<div ng-controller='MainController' class="container">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<div ng-hide="loaded">
+				Loading...
+			</div>
+			<div ng-show="loaded">
+				<div class="row">
+					<!-- <select ng-model="order">
+						<option></option>
+						<option></option>
+						<option></option>
+					</select> -->
+					<input id="search" type="search" ng-model="price" placeholder="search by name..."> 
+					<div class="col-md-6" ng-repeat="product in products | filter: price as results track by $index">
+						<a href="#/{{product.id}}">
+						<img src="{{completeUrl(product.mainImage.ref)}}"/>
+						<div ng-bind="product.name"></div></a>
+						<div ng-bind="priceMaker(product.defaultPriceInCents)"></div>
+					</div>
+					<div class="col-md-6" ng-if="results.length===0">No such results...</div>
+			</div>
+			<!-- <div ng-bind="fijidata"></div> -->
+		</div>
+	</div>
 </div>

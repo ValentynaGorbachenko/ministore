@@ -11,9 +11,31 @@
 	<script type="text/javascript" src="controllers/mainController.js"></script>
 	<script type="text/javascript" src="factories/fijiFactory.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<h1>MINI STORE</h1>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/">FIJI WATER</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<!-- <li><a href="#/">Link</a></li> -->
+					<li><a href="#/">Cart</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<div ng-view></div>
+	<script src="jquery/dist/jquery.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
