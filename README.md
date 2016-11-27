@@ -1,5 +1,9 @@
 # ministore
 A simple store page example using Angular
+### Prerequisites
+[Install Node](https://nodejs.org/en/download/)
+and 
+[Install Bower](https://bower.io/)
 ### Installing
 Clone repo
 ```
