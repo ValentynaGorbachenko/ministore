@@ -3,7 +3,7 @@ A simple store page example using Angular
 ### Installing
 Clone repo
 ```
-https://github.com/ValentynaGorbachenko/ministore.git
+git clone https://github.com/ValentynaGorbachenko/ministore.git
 cd ministore
 ```
 Install dependencies
@@ -15,4 +15,4 @@ Run server
 ```
 node server.js
 ```
-Open [nimistore](http://localhost:8000/) in your prefered  browser
+Open [ministore](http://localhost:8000/) in your prefered  browser
