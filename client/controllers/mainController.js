@@ -5,14 +5,14 @@ app.controller('MainController', ['$scope', 'FijiFactory', ($scope, FijiFactory)
 	$scope.fijidata = {};
 	$scope.products = [];
 	$scope.loaded = false;
-	$scope.lessthan20 = false;
-	// console.log('fijidata', $scope.fijidata);
+	
 	FijiFactory.getFijiData((data)=>{
 		// $scope.fijidata = JSON.stringify(data);
+		// console.log('$scope.fijidata', $scope.fijidata);
 		$scope.fijidata = data;
 		$scope.products = data.products;
 		$scope.loaded = true;
-		// console.log('$scope.fijidata', $scope.fijidata);
+		
 	});
 	$scope.completeUrl = (str)=>{
 		return "http:"+str;
@@ -23,14 +23,16 @@ app.controller('MainController', ['$scope', 'FijiFactory', ($scope, FijiFactory)
 		}
 		return "$"+Math.floor(num/100)+"."+num%100;
 	};
-	// $scope.less20 = (product, $scope.lessthan20)=>{
-	// 	if (lessthan20){
-	// 		if (product.defaultPriceInCents>2000){
-	// 			return true;
-	// 		} else {
-	// 			return false;
-	// 		}
-	// 	}
-	// 	return true;
-	// };
+	$scope.less20 = ()=>{
+		if($scope.lessthan20){
+			// all items that are greater than $20
+			$scope.products = $scope.fijidata.products.filter((elem)=>{
+				return elem.defaultPriceInCents>2000;
+			});
+		} else {
+			//all items
+			$scope.products = $scope.fijidata.products;
+		}
+	};
+	
 }]);

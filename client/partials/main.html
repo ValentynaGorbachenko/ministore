@@ -16,22 +16,19 @@
 						</select>
 					</label>
 					<label>Show all items that are greater than $20.00
-						<input type="checkbox" ng-model="lessthan20">
+						<input type="checkbox" ng-model="lessthan20" ng-change="less20()">
 					</label>
 					<label>Search by name: 
 						<input id="search" type="search" ng-model="byname" placeholder="search by name...">
 					</label>
-					 <!-- | less20: lessthan20 -->
 					<div class="col-md-6" ng-repeat="product in products | orderBy: order | filter: byname as results track by $index">
 						<a href="#/{{product.id}}">
 						<img src="{{completeUrl(product.mainImage.ref)}}"/>
 						<div ng-bind="product.name"></div></a>
 						<div ng-bind="priceMaker(product.defaultPriceInCents)"></div>
 					</div>
-
 					<div class="col-md-6" ng-if="results.length===0">No such results...</div>
 			</div>
-			<!-- <div ng-bind="fijidata"></div> -->
 		</div>
 	</div>
 </div>
